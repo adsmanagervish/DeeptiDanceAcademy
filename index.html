@@ -43,16 +43,22 @@
         }
 
         /* --- Hero Section --- */
+        /* --- Updated Hero Section --- */
         .hero {
-            padding: 100px 20px;
+            padding: 120px 20px;
             text-align: center;
-            /* --- SETTING YOUR IMAGE HERE --- */
-            /* The gradient overlay ensures text is readable over the bright spots */
+            /* This ensures the image covers the whole area and stays centered */
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('image_0.jpg'); 
             background-size: cover;
-            background-position: center;
-            /* Changed accent to highlight pink */
+            background-position: center center;
+            background-repeat: no-repeat;
             border-bottom: 4px solid var(--primary-highlight);
+            /* Keeps the image looking sharp on different screen sizes */
+            min-height: 80vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         h1 {
@@ -207,9 +213,17 @@
         .final-cta {
             padding: 100px 20px;
             text-align: center;
-            background: linear-gradient(45deg, #222, #000);
+            /* Added a deep purple/black gradient background to match the image vibe */
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a001a 100%);
+            border-top: 1px solid rgba(255, 0, 127, 0.2);
         }
-
+        
+        .final-cta h2 {
+            color: var(--primary-highlight);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
         .contact-info {
             margin-top: 30px;
             font-size: 1.1rem;
