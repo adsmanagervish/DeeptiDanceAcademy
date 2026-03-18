@@ -7,9 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-orange: #ff5e00;
-            --primary-purple: #6a11cb;
-            --accent-gold: #d4af37;
+            /* --- COLOR ADJUSTMENTS BASED ON THE NEW IMAGE --- */
+            --primary-highlight: #ff007f; /* Vibrant Pink/Magenta from the image */
+            --primary-blue: #007bff;     /* Electric Blue from the image */
             --dark-bg: #121212;
             --light-text: #f4f4f4;
             --glass: rgba(255, 255, 255, 0.1);
@@ -31,7 +31,8 @@
 
         /* --- Hook Banner --- */
         .hook-banner {
-            background: linear-gradient(90deg, var(--primary-orange), var(--primary-purple));
+            /* Now using a blue-to-pink gradient to match image */
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-highlight));
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -43,12 +44,15 @@
 
         /* --- Hero Section --- */
         .hero {
-            padding: 80px 20px;
+            padding: 100px 20px;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=1920'); /* Placeholder: Dance Energy */
+            /* --- SETTING YOUR IMAGE HERE --- */
+            /* The gradient overlay ensures text is readable over the bright spots */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('image_0.png'); 
             background-size: cover;
             background-position: center;
-            border-bottom: 4px solid var(--accent-gold);
+            /* Changed accent to highlight pink */
+            border-bottom: 4px solid var(--primary-highlight);
         }
 
         h1 {
@@ -60,7 +64,8 @@
         }
 
         .trust-line {
-            color: var(--accent-gold);
+            /* Changed color to highlight pink */
+            color: var(--primary-highlight);
             font-family: 'Playfair Display', serif;
             font-size: 1.4rem;
             font-style: italic;
@@ -69,7 +74,8 @@
 
         .btn {
             display: inline-block;
-            background: #25D366; /* WhatsApp Green */
+            /* Updated to use the electric blue from the image */
+            background: var(--primary-blue);
             color: white;
             padding: 18px 35px;
             border-radius: 50px;
@@ -82,7 +88,8 @@
 
         .btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 15px 25px rgba(37, 211, 102, 0.4);
+            /* Hover shadow matches the electric blue */
+            box-shadow: 0 15px 25px rgba(0, 123, 255, 0.4);
         }
 
         /* --- Campaign Details --- */
@@ -101,7 +108,8 @@
 
         .detail-item strong {
             display: block;
-            color: var(--primary-orange);
+            /* Details label now uses the image blue */
+            color: var(--primary-blue);
             font-size: 0.8rem;
             text-transform: uppercase;
         }
@@ -135,8 +143,9 @@
             transition: 0.3s;
         }
 
-        .vibe-card.energy { border-top: 5px solid var(--primary-orange); }
-        .vibe-card.culture { border-top: 5px solid var(--accent-gold); }
+        /* Cards borders adjusted to blue and pink */
+        .vibe-card.energy { border-top: 5px solid var(--primary-blue); }
+        .vibe-card.culture { border-top: 5px solid var(--primary-highlight); }
 
         /* --- Instructor --- */
         .instructor {
@@ -157,7 +166,6 @@
             width: 250px;
             height: 250px;
             border-radius: 50%;
-            background: var(--accent-gold); /* Placeholder for photo */
             flex-shrink: 0;
             border: 5px solid var(--glass);
         }
@@ -174,7 +182,8 @@
             border-radius: 15px;
             margin: 20px auto;
             max-width: 700px;
-            border-left: 4px solid var(--primary-purple);
+            /* Border uses the image pink */
+            border-left: 4px solid var(--primary-highlight);
         }
 
         /* --- FAQ --- */
@@ -220,7 +229,7 @@
 
     <header class="hero">
         <p class="trust-line">Join Jabalpur’s Most Loved Dance Community</p>
-        <h1>Jabalpur's Top Dance Classes <br> <span style="color:var(--primary-orange)">Summer Batch Now Open</span></h1>
+        <h1>Jabalpur's Top Dance Classes <br> <span style="background: linear-gradient(90deg, #66fcf1, #ff007f); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Summer Batch Now Open</span></h1>
         <div style="margin-top: 40px;">
             <a href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20the%20Summer%20Batch%20Demo" class="btn">
                 Book My FREE Demo Class
@@ -244,7 +253,7 @@
     </section>
 
     <section class="vibe-section">
-        <h2>Learn Dance This Summer — <br> <span style="color:var(--primary-purple)">Fun, Fitness & Confidence</span></h2>
+        <h2>Learn Dance This Summer — <br> <span style="color:var(--primary-blue)">Fun</span>, <span style="color:var(--primary-highlight)">Fitness</span> & Confidence</h2>
         <p>Whether you want to set the stage on fire with Hip-Hop or find your soul in Tandav, we bring you the perfect blend of modern energy and traditional grace.</p>
         
         <div class="vibe-grid">
@@ -265,7 +274,7 @@
                 <img src="https://via.placeholder.com/250" alt="Deepti" style="width:100%; border-radius: 50%;">
             </div>
             <div>
-                <h3 style="font-size: 2rem; color: var(--accent-gold);">Meet Your Instructor: Deepti</h3>
+                <h3 style="font-size: 2rem; color: var(--primary-highlight);">Meet Your Instructor: Deepti</h3>
                 <p style="font-style: italic; margin-bottom: 15px;">The Heart of the Studio</p>
                 <p>With expertise in Classical, Hip-Hop, and more, Deepti blends discipline with high-energy styles. Her focus is simple — help every student feel confident and enjoy the process from day one.</p>
             </div>
@@ -276,11 +285,11 @@
         <h2 style="text-align: center;">What Our Students Say</h2>
         <div class="testimonial-card">
             <p>"Best Summer Activity in Jabalpur! I joined the Bollywood and Semi-classical classes last year. The energy in the studio is infectious!"</p>
-            <strong style="display:block; margin-top:10px; color:var(--primary-orange)">— Priya S., Student</strong>
+            <strong style="display:block; margin-top:10px; color:var(--primary-blue)">— Priya S., Student</strong>
         </div>
         <div class="testimonial-card">
             <p>"My son took the Hip-Hop batch and he’s a different kid now. He’s more confident and active. Highly recommend the free demo!"</p>
-            <strong style="display:block; margin-top:10px; color:var(--primary-orange)">— Rahul M., Parent</strong>
+            <strong style="display:block; margin-top:10px; color:var(--primary-blue)">— Rahul M., Parent</strong>
         </div>
     </section>
 
@@ -301,7 +310,7 @@
     </section>
 
     <footer class="final-cta">
-        <h2>Jabalpur’s Most Loved Dance Community </h2>
+        <h2>Ready to Dance?</h2>
         <p>Don't wait for the heat to kick in—secure your spot now!</p>
         <div style="margin: 30px 0;">
             <a href="https://wa.me/91XXXXXXXXXX" class="btn">Chat with us on WhatsApp</a>
