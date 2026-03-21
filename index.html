@@ -175,12 +175,20 @@
         flex-shrink: 0;
         border: 5px solid var(--glass);
     
-        /* FIX: This zooms into the center of the image */
-        object-fit: cover;
-        transform: scale(1.4); /* Adjust this number (1.2 to 1.5) until the face fits perfectly */
+        /* Using background-image instead of <img> allows for precise zooming */
+        background-image: url('image_1.png');
+        background-repeat: no-repeat;
     
-        /* Prevents the zoomed image from spilling out of the circle */
-        overflow: hidden; 
+        /* ADJUST THE ZOOM HERE: 
+       Increase this % to make the face bigger, decrease to see more background */
+        background-size: 165%; 
+    
+        /* ADJUST THE POSITION HERE:
+       'center' keeps it horizontal, '20%' nudges the face slightly upward */
+        background-position: center 25%;
+    
+        /* Adds a soft shadow to make the profile pop from the page */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         /* --- Testimonials --- */
@@ -292,7 +300,7 @@
     <section class="instructor">
         <div class="instructor-content">
             <div class="instructor-img">
-                <img src="image_1.png" alt="Deepti" style="width:100%; border-radius: 50%;">
+                <!--<img src="image_1.png" alt="Deepti" style="width:100%; border-radius: 50%;">-->
             </div>
             <div>
                 <h3 style="font-size: 2rem; color: var(--primary-highlight);">Meet Your Instructor: Deepti</h3>
