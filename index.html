@@ -169,19 +169,19 @@
         }
 
         .instructor-img {
-          width: 250px;
-          height: 250px;
-          border-radius: 50%;
-          flex-shrink: 0;
-          border: 5px solid var(--glass);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 5px solid var(--glass);
     
-        /* Ensures the face stays centered and proportional */
-        object-fit: cover; 
-        object-position: center;
+    /* FIX: This zooms into the center of the image */
+    object-fit: cover;
+    transform: scale(1.4); /* Adjust this number (1.2 to 1.5) until the face fits perfectly */
     
-        /* Adds a subtle professional touch */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
+    /* Prevents the zoomed image from spilling out of the circle */
+    overflow: hidden; 
+}
 
         /* --- Testimonials --- */
         .testimonials {
